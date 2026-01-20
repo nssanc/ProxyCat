@@ -8,5 +8,8 @@ services:
       - "1080:1080"
       - "5000:5000"
     volumes:
-      - ./config:/app/config
+      - ./config/config.ini:/app/config/config.ini
+      - ./config/ip.txt:/app/config/ip.txt
+      - ./config/blacklist.txt:/app/config/blacklist.txt
+      - ./config/whitelist.txt:/app/config/whitelist.txt
     restart: unless-stopped

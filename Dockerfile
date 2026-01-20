@@ -11,7 +11,5 @@ COPY . .
 
 RUN rm -f config/config.ini
 
-VOLUME ["/app/config"]
-
 CMD ["python", "app.py"]
 
