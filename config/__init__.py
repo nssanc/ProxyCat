@@ -1,1 +1,1 @@
-from .getip import *
+from . import getip
