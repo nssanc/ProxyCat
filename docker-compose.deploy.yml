@@ -1,7 +1,7 @@
 services:
   proxycat:
     image: ghcr.io/nssanc/proxycat:latest
-    # build: .  # 本地构建使用此选项
+    container_name: proxycat
     environment:
       - TZ=Asia/Shanghai
     ports:
@@ -10,4 +10,3 @@ services:
     volumes:
       - ./config:/app/config
     restart: unless-stopped
-    network_mode: "bridge"
