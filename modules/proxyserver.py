@@ -2,7 +2,7 @@ import asyncio, httpx, logging, re, socket, struct, time, base64, random, os
 from modules.modules import get_message, load_ip_list
 from asyncio import TimeoutError
 from itertools import cycle
-from config import getip
+from modules import getip
 from configparser import ConfigParser
 
 
