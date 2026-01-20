@@ -1,7 +1,8 @@
 version: '3'
 services:
   proxycat:
-    build: .
+    image: ghcr.io/nssanc/proxycat:latest
+    # build: .  # 本地构建使用此选项
     environment:
       - TZ=Asia/Shanghai
     ports:
