@@ -15,10 +15,13 @@ def newip():
         url = config.get('getip_url', '')
         username = config.get('proxy_username', '')
         password = config.get('proxy_password', '')
-        
+
         if not url:
             raise ValueError('getip_url')
-            
+
+        if not url.startswith(('http://', 'https://')):
+            url = 'https://' + url
+
         def get_proxy():
             response = requests.get(url)
             response.raise_for_status()

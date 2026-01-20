@@ -504,8 +504,10 @@ def load_config(config_file='config/config.ini'):
 
 def load_ip_list(file_path):
     try:
+        if not file_path or not file_path.strip():
+            return set()
         config_path = os.path.join('config', os.path.basename(file_path))
-        if os.path.exists(config_path):
+        if os.path.exists(config_path) and os.path.isfile(config_path):
             with open(config_path, 'r', encoding='utf-8') as f:
                 return set(line.strip() for line in f if line.strip())
     except Exception as e:
